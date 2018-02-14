@@ -1,0 +1,64 @@
+$transition: all 0.3s cubic-bezier(.55,0,.1,1);
+
+
+.greeting-container {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  transition: $transition;
+  
+  .greeting {
+    display: table;
+    font-weight: bolder;
+    font-size: 65pt;
+    background-image: linear-gradient(to left, #4e4376, #2b5876);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: $transition;
+  }
+
+  .typed-cursor {
+    font-size: 90px;
+    color: orange;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: -15px;
+    animation: blink 0.9s step-end infinite;
+    transition: $transition;
+  }
+
+  .description {
+    font-size: 20pt;
+    font-weight: 100;
+    color: orange;
+    position: fixed;
+    top: 3em;
+  }
+
+  &.finished {
+    transform: translate(0);
+    top: 2em;
+    left: 2em;
+
+    .greeting {
+      font-size: 50pt;
+    }
+
+    .typed-cursor {
+      font-size: 1pt;
+      color: white;
+    }
+  }
+}
+
+@keyframes blink {
+  from, to { color: transparent; }
+  50% { color: orange; }
+}
