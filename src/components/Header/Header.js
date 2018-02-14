@@ -19,9 +19,9 @@ class Header extends React.Component {
     return new Promise(resolve => {
       new Typed('.greeting', {
         strings: ['Hi. ^400 I\'m Oguz Gelal'],
-        typeSpeed: 60,
+        typeSpeed: 50,
         onComplete: () => {
-          setTimeout(resolve, 800);
+          setTimeout(resolve, 700);
         }
       });
     })
@@ -31,7 +31,8 @@ class Header extends React.Component {
     return new Promise(resolve => {
       new Typed('.description', {
         strings: ['I\'m a full-stack web developer'],
-        typeSpeed: 60,
+        typeSpeed: 25,
+        startDelay: 200,
         onComplete: () => {
           setTimeout(resolve, 400)
         }

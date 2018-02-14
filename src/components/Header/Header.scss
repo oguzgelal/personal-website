@@ -1,4 +1,7 @@
 $transition: all 0.3s cubic-bezier(.55,0,.1,1);
+$c1: #4e4376;
+$c2: #2b5876;
+$c3: orange;
 
 
 .greeting-container {
@@ -14,7 +17,7 @@ $transition: all 0.3s cubic-bezier(.55,0,.1,1);
     display: table;
     font-weight: bolder;
     font-size: 65pt;
-    background-image: linear-gradient(to left, #4e4376, #2b5876);
+    background-image: linear-gradient(to left, $c1, $c2);
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -26,20 +29,12 @@ $transition: all 0.3s cubic-bezier(.55,0,.1,1);
 
   .typed-cursor {
     font-size: 90px;
-    color: orange;
+    color: $c3;
     font-weight: bolder;
     margin-left: 10px;
     margin-top: -15px;
     animation: blink 0.9s step-end infinite;
     transition: $transition;
-  }
-
-  .description {
-    font-size: 20pt;
-    font-weight: 100;
-    color: orange;
-    position: fixed;
-    top: 3em;
   }
 
   &.finished {
@@ -49,6 +44,23 @@ $transition: all 0.3s cubic-bezier(.55,0,.1,1);
 
     .greeting {
       font-size: 50pt;
+      color: white;
+      padding: 0 0.3em;
+      background: $c1;
+      background: -webkit-linear-gradient(to right, $c1, $c2);
+      background: linear-gradient(to right, $c1, $c2);
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .description {
+      font-size: 20pt;
+      font-weight: 100;
+      color: white;
+      position: fixed;
+      top: 100px;
+      background-color: $c3;
+      padding: 0.2em 0.5em;
     }
 
     .typed-cursor {
@@ -60,5 +72,5 @@ $transition: all 0.3s cubic-bezier(.55,0,.1,1);
 
 @keyframes blink {
   from, to { color: transparent; }
-  50% { color: orange; }
+  50% { color: $c3; }
 }
