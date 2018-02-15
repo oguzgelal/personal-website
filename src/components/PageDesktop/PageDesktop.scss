@@ -16,7 +16,7 @@ $c3: orange;
   .greeting {
     display: table;
     font-weight: bolder;
-    font-size: 65pt;
+    font-size: 55pt;
     background-image: linear-gradient(to left, $c1, $c2);
     color:transparent;
     -webkit-background-clip: text;
@@ -28,7 +28,7 @@ $c3: orange;
   }
 
   .typed-cursor {
-    font-size: 90px;
+    font-size: 80px;
     color: $c3;
     font-weight: bolder;
     margin-left: 10px;
@@ -45,7 +45,7 @@ $c3: orange;
     .greeting {
       font-size: 50pt;
       color: white;
-      padding: 0 0.3em;
+      padding: 0 20px;
       background: $c1;
       background: -webkit-linear-gradient(to right, $c1, $c2);
       background: linear-gradient(to right, $c1, $c2);
@@ -60,7 +60,7 @@ $c3: orange;
       position: fixed;
       top: 100px;
       background-color: $c3;
-      padding: 0.2em 0.5em;
+      padding: 0.2em 20px;
     }
 
     .typed-cursor {

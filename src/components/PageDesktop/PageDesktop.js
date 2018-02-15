@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Typed from 'typed.js';
 import cx from 'classnames';
 
-import './Header.scss';
+import './PageDesktop.scss';
 
-class Header extends React.Component {
+class PageDesktop extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -33,6 +33,7 @@ class Header extends React.Component {
         strings: ['I\'m a full-stack web developer'],
         typeSpeed: 25,
         startDelay: 200,
+        showCursor: false,
         onComplete: () => {
           setTimeout(resolve, 400)
         }
@@ -58,7 +59,7 @@ class Header extends React.Component {
   }
 }
 
-Header.propTypes = {
+PageDesktop.propTypes = {
 };
 
-export default Header;
+export default PageDesktop;
