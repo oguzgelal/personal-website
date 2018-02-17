@@ -4,10 +4,7 @@
   display: table;
   font-weight: bolder;
   font-size: 55pt;
-  background-image: linear-gradient(to left, $c1, $c2);
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: $c1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -24,5 +21,4 @@
     line-height: 100px;
   }
 }
-
 
