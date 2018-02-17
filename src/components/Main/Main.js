@@ -45,6 +45,10 @@ class Main extends React.Component {
   render() {
     return (
       <div className="main">
+        <div className={`main-bg ${stageClasses(this.state.stage)}`}>
+          <div className={`t1 ${stageClasses(this.state.stage)}`} />
+          <div className={`t2 ${stageClasses(this.state.stage)}`} />
+        </div>
         <div className={`main-greetings ${stageClasses(this.state.stage)}`}>
           {
             (this.state.stage >= 1 || this.state.stage === -1) &&

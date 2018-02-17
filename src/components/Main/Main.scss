@@ -1,34 +1,77 @@
 @import '../../theme/default.scss';
 
-.main-greetings {
-  display: flex;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content;
-  transition: $transition;
+$transition-bg: all 0.9s cubic-bezier(.55,0,.1,1);
 
-  .typed-cursor {
-    font-size: 80px;
-    color: $c3;
-    font-weight: bolder;
-    margin-left: 10px;
-    margin-top: -15px;
-    animation: blink 0.9s step-end infinite;
-    transition: $transition;
-  }
+.main {
 
-  &.s2, &.sm {
-    transform: translate(0);
-    top: 2em;
-    left: 2em;
+  &-bg {
+    .t1 {
+      position: fixed;
+      right: -80vw;
+      bottom: -100vh;
+      width: 80vw;
+      height: 100vh;
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      background-image: linear-gradient(to left, $c1, $c2);
+      z-index: 2;
+      transition: $transition-bg;
+      transition-delay: 0.1s;
 
-    .typed-cursor {
-      font-size: 1pt;
-      color: white;
+      &.s2 {
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .t2 {
+      position: fixed;
+      right: -80vw;
+      bottom: -100vh;
+      width: 80vw;
+      height: 100vh;
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      background-color: $c3;
+      z-index: 1;
+      transition: $transition-bg;
+      transform: scale(2);
+
+      &.s2 {
+        right: 10vw;
+        bottom: -5vh;
+      }
     }
   }
+
+  &-greetings {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    transition: $transition;
+  
+    .typed-cursor {
+      font-size: 80px;
+      color: $c3;
+      font-weight: bolder;
+      margin-left: 10px;
+      margin-top: -15px;
+      animation: blink 0.9s step-end infinite;
+      transition: $transition;
+    }
+  
+    &.s2, &.sm {
+      transform: translate(0);
+      top: 2em;
+      left: 2em;
+  
+      .typed-cursor {
+        font-size: 1pt;
+        color: white;
+      }
+    }
+  }
+
 }
 
 @keyframes blink {
