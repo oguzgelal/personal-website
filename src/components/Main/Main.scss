@@ -1,0 +1,37 @@
+@import '../../theme/default.scss';
+
+.main-greetings {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  transition: $transition;
+
+  .typed-cursor {
+    font-size: 80px;
+    color: $c3;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: -15px;
+    animation: blink 0.9s step-end infinite;
+    transition: $transition;
+  }
+
+  &.s2, &.sm {
+    transform: translate(0);
+    top: 2em;
+    left: 2em;
+
+    .typed-cursor {
+      font-size: 1pt;
+      color: white;
+    }
+  }
+}
+
+@keyframes blink {
+  from, to { color: transparent; }
+  50% { color: $c3; }
+}

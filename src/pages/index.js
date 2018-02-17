@@ -1,10 +1,8 @@
 import React from 'react'
-// import Link from 'gatsby-link'
-
-import PageDesktop from '../components/PageDesktop/PageDesktop';
+import Main from '../components/Main/Main'
 
 const IndexPage = () => (
-  <PageDesktop />
+  <Main />
 )
 
 export default IndexPage

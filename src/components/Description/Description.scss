@@ -1,0 +1,13 @@
+@import '../../theme/default.scss';
+
+.description {
+  &.s2, &.sm {
+    font-size: 20pt;
+    font-weight: 100;
+    color: white;
+    position: fixed;
+    top: 100px;
+    background-color: $c3;
+    padding: 0.2em 20px;
+  }
+}
