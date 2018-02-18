@@ -15,8 +15,7 @@ class Main extends React.Component {
     super(props, context);
 
     this.state = {
-      stage: 0,
-      mobile: false,
+      stage: 0
     };
 
     this.stageFinished = this.stageFinished.bind(this);
@@ -29,23 +28,17 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    if (window.innerWidth > 400) {
-      this.setState({
-        stage: 1,
-        mobile: false,
-      })
+    if (window.innerWidth > 500) {
+      this.setState({ stage: 1 })
     } else {
-      this.setState({
-        stage: -1,
-        mobile: true,
-      })
+      this.setState({ stage: -1 })
     }
   }
 
   render() {
     return (
       <div className="main">
-        <div className={`main-bg ${stageClasses(this.state.stage)}`}>
+        <div className="main-bg">
           <div className={`t1 ${stageClasses(this.state.stage)}`} />
           <div className={`t2 ${stageClasses(this.state.stage)}`} />
         </div>
@@ -53,21 +46,21 @@ class Main extends React.Component {
           {
             (this.state.stage >= 1 || this.state.stage === -1) &&
             <Greeting
-              animate={!this.state.mobile}
+              animate={this.state.stage !== -1}
               animationFinished={this.stageFinished}
               class={stageClasses(this.state.stage)}
               textDesktop="Hi. ^400 I'm Oguz Gelal"
-              textMobile="Hi. I'm Oguz Gelal"
+              textMobile="Oguz Gelal"
             />
           }
           {
             (this.state.stage >= 2 || this.state.stage === -1) &&
             <Description
-              animate={!this.state.mobile}
+              animate={this.state.stage !== -1}
               animationFinished={this.stageFinished}
               class={stageClasses(this.state.stage)}
               textDesktop="I'm a full-stack web developer"
-              textMobile="I'm a full-stack web developer"
+              textMobile="Full-stack web developer"
             />
           }
         </div>
