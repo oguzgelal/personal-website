@@ -1,6 +1,27 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { navigateTo } from 'gatsby-link'
 
-const NotFoundPage = () => navigateTo('/')
+class NotFoundPage extends React.Component {
+  constructor(props, context) {
+    super(props, context);
 
-export default NotFoundPage
+    this.state = {
+    };
+  }
+
+  componentDidMount() {
+    navigateTo('/')
+  }
+
+  render() {
+    return (
+      <div />
+    );
+  }
+}
+
+NotFoundPage.propTypes = {
+};
+
+export default NotFoundPage;
