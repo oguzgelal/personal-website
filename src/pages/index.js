@@ -8,8 +8,8 @@ import MainLite from '../components/MainLite/MainLite'
 const IndexPage = props => {
 
   let render = <Main />
-  
-  if (bowser.msie || bowser.msedge || bowser.opera) {
+
+  if (bowser.msie || bowser.msedge) {
     render = <MainLite />
   }
 
