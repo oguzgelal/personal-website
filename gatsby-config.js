@@ -13,7 +13,10 @@ module.exports = {
         postCssPlugins: [
           pixrem(),
           autoprefixer({
-            browsers: ['last 5 versions']
+            browsers: [
+              '> 1%',
+              'last 2 versions'
+            ]
           })
         ],
         precision: 8
