@@ -1,0 +1,46 @@
+@import '../../theme/default.scss';
+
+.main-lite {
+  padding: 2em;
+
+  &-title {
+    font-family: 'inter-ui-black';
+    font-size: 50pt;
+
+    @include tablet {
+      font-size: 38pt;
+    }
+
+    @include mobile {
+      font-size: 28pt;
+    }
+  }
+
+  &-description {
+    font-size: 20pt;
+
+    @include tablet {
+      font-size: 16pt;
+    }
+
+    @include mobile {
+      font-size: 14pt;
+    }
+  }
+
+  &-buttons {
+    font-family: 'inter-ui-black';
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    &-button {
+      width: 100%;
+      text-align: right;
+      a {
+        color: black;
+        font-size: 22pt;
+        text-decoration: none;
+      }
+    }
+  }
+}
