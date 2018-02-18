@@ -1,17 +1,27 @@
 module.exports = [
   {
-    type: 'github',
-    title: 'Github',
-    url: 'https://github.com/oguzgelal'
+    id: 'contact',
+    title: 'Contact',
+    url: 'mailto:o.gelal77@gmail.com'
   },
   {
-    type: 'facebook',
+    id: 'cv',
+    title: 'Resume',
+    url: '/OguzGelalCV-6-1.pdf',
+  },
+  {
+    id: 'facebook',
     title: 'Facebook',
     url: 'https://facebook.com/oguzgelal'
   },
   {
-    type: 'linkedin',
+    id: 'linkedin',
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/oguzgelal'
-  }
+  },
+  {
+    id: 'github',
+    title: 'Github',
+    url: 'https://github.com/oguzgelal'
+  },
 ]

@@ -13,12 +13,28 @@
   &.s2, &.sm {
     font-size: 50pt;
     color: white;
-    padding: 0 20px;
+    padding: 0 $greeting-padding;
     background: $c1;
     background: -webkit-linear-gradient(to right, $c1, $c2);
     background: linear-gradient(to right, $c1, $c2);
-    height: 100px;
-    line-height: 100px;
+    height: $greeting-height;
+    line-height: $greeting-height;
+
+    @include tablet {
+      font-size: 40pt;
+      height: $greeting-height-tablet;
+      line-height: $greeting-height-tablet;
+    }
+
+    @include mobile {
+      width: 100%;
+      font-size: 32pt;
+      height: $greeting-height-mobile;
+      line-height: $greeting-height-mobile;
+      padding: 0;
+      text-align: center;
+    }
+
   }
 }
 

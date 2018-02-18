@@ -6,9 +6,24 @@
     font-weight: 100;
     color: white;
     position: fixed;
-    top: 100px;
+    top: $greeting-height;
     background-color: $c3;
-    padding: 0.2em 20px;
+    padding: 0.2em $greeting-padding;
     left: 0;
+
+    @include tablet {
+      top: $greeting-height-tablet;
+    }
+
+    @include mobile {
+      width: 100%;
+      top: $greeting-height-mobile;
+      font-size: 12pt;
+      padding: 0 $greeting-padding;
+      height: $description-height-mobile;
+      line-height: $description-height-mobile;
+      padding: 0;
+      text-align: center;
+    }
   }
 }

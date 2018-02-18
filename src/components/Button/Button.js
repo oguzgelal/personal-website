@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Link from 'gatsby-link'
 
 import './Button.scss'
 
 const Button = props => {
   return (
-    <Link to={props.url} className="link">
-      <div className={`button button-${props.type}`}>
+    <a href={props.url} target="_new" className="link">
+      <div className={`button button-${props.id}`}>
         <div className="button-txt">{props.title}</div>
       </div>
-    </Link>
+    </a>
   );
 };
 
 Button.propTypes = {
-  type: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string,
   url: PropTypes.string,
 };

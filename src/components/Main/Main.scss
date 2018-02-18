@@ -16,8 +16,11 @@ $transition-bg: all 0.9s cubic-bezier(.55,0,.1,1);
       z-index: 2;
       transition: $transition-bg;
       transition-delay: 0.1s;
-
-      &.s2 {
+      @include mobile {
+        height: calc(100vh - #{($greeting-height-mobile + $description-height-mobile)})
+      }
+      
+      &.s2, &.sm {
         right: 0;
         bottom: 0;
       }
@@ -33,8 +36,11 @@ $transition-bg: all 0.9s cubic-bezier(.55,0,.1,1);
       z-index: 1;
       transition: $transition-bg;
       transform: scale(2);
+      @include mobile {
+        height: calc(100vh - #{($greeting-height-mobile + $description-height-mobile)})
+      }
 
-      &.s2 {
+      &.s2, &.sm {
         right: 10vw;
         bottom: -5vh;
       }
@@ -49,6 +55,11 @@ $transition-bg: all 0.9s cubic-bezier(.55,0,.1,1);
     transform: translate(-50%, -50%);
     width: fit-content;
     transition: $transition;
+    z-index: 3;
+
+    @include mobile {
+      width: 100%;
+    }
   
     .typed-cursor {
       font-size: 80px;
@@ -64,6 +75,16 @@ $transition-bg: all 0.9s cubic-bezier(.55,0,.1,1);
       transform: translate(0);
       top: 2em;
       left: 2em;
+
+      @include tablet {
+        top: 1em;
+        left: 1em;
+      }
+
+      @include mobile {
+        top: 0;
+        left: 0;
+      }
   
       .typed-cursor {
         font-size: 1pt;

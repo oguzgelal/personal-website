@@ -7,11 +7,10 @@ import './ButtonGroup.scss'
 const ButtonGroup = props => {
 
   const buttons = [];
-  props.buttons.map((b, i) => {
+  props.buttons.map(b => {
     buttons.push(
       <Button
-        key={i}
-        type={b.type}
+        key={b.id}
         title={b.title}
         url={b.url}
       />

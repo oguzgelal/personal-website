@@ -3,4 +3,32 @@ $c1: #4e4376;
 $c2: #2b5876;
 $c3: orange;
 
+$mobile-width: 500px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// component specific
+
+$greeting-padding: 20px;
+$greeting-height: 100px;
+$greeting-height-tablet: 90px;
+$greeting-height-mobile: 90px;
+$description-height-mobile: 30px;
