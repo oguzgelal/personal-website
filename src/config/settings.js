@@ -34,6 +34,6 @@ module.exports = {
       title: 'Github',
       url: 'https://github.com/oguzgelal'
     },
-  ]
+  ],
 
 }
