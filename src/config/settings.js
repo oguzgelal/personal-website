@@ -20,9 +20,9 @@ module.exports = {
       url: '/OguzGelalCV-6-1.pdf',
     },
     {
-      id: 'facebook',
-      title: 'Facebook',
-      url: 'https://facebook.com/oguzgelal'
+      id: 'twitter',
+      title: 'Twitter',
+      url: 'https://twitter.com/oguzgelal'
     },
     {
       id: 'linkedin',
