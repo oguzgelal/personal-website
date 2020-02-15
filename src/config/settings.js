@@ -17,7 +17,7 @@ module.exports = {
     {
       id: 'cv',
       title: 'Resume',
-      url: '/OguzGelalCV-6-1.pdf',
+      url: '/OguzGelalCV-6-2.pdf',
     },
     {
       id: 'twitter',
